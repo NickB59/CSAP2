@@ -10,65 +10,87 @@ import java.util.Scanner;
 public class CharacterAnalyzer
 {
 	private char theChar;
+	private int ascii;
 
 	public CharacterAnalyzer()
 	{
-
+		
 
 	}
 
 	public CharacterAnalyzer(char c)
 	{
-
+		theChar = c;
 
 	}
 
 	public void setChar(char c)
 	{
-
+		theChar = c;
 
 	}
 
 	public char getChar()
 	{
-		return '-';
+		return theChar;
 	}
 
 	public boolean isUpper( )
 	{
-
-
-
-		return false;
+		if(ascii > 64 && ascii < 91)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	public boolean isLower( )
 	{
-
-
-
-		return false;
+		if(ascii > 96 && ascii < 123)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 	
 	public boolean isNumber( )
 	{
-
-
-
-		return false;
+		if(ascii > 47 && ascii < 58)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}	
 
 	public int getASCII( )
 	{
-		return 0;
+		return ascii;
 	}
 
 	public String toString()
 	{
-
-
-
-
-		return ""+getChar() + " is a lowercase character. ASCII == " + getASCII() + "\n";	  
+		if(isUpper() == true)
+		{
+		return "" +getChar() + " is a uppercase character. ASCII == " + getASCII() + "\n";
+		}
+		else if(isLower() == true)
+		{
+			return "" +getChar() + " is a lowercase character. ASCII == " + getASCII() + "\n";
+		}
+		else if(isNumber() == true)
+		{
+			return "" +getChar() + " is a number. ASCII == " + getASCII() + "\n";
+		}
+		
+		return null;
 	}
 }
