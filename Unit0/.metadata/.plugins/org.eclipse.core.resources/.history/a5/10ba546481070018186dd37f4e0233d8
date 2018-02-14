@@ -1,0 +1,98 @@
+//© A+ Computer Science  -  www.apluscompsci.com
+//Name -
+//Date -
+//Class -
+//Lab  -
+
+import static java.lang.System.*;
+import java.util.Scanner;
+
+public class Lab0c
+{
+	public static void main (String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+		
+		byte byteOne, byteTwo; 
+		int intOne, intTwo, intTotal;
+		double doubleOne, doubleTwo, doubleTotal;
+		float floatOne, floatTwo;
+		short shortOne, shortTwo;
+		long longOne, longTwo; 
+		//byte input
+		System.out.print("Enter an byte :: ");
+		byteOne = keyboard.nextByte();
+		System.out.print("Enter an byte :: ");
+		byteTwo = keyboard.nextByte();
+		
+		//int input
+		System.out.print("Enter an integer :: ");
+		intOne = keyboard.nextInt();
+
+		System.out.print("Enter an integer :: ");
+		intTwo = keyboard.nextInt();
+
+
+		//double input
+		System.out.print("Enter a double :: ");
+		doubleOne = keyboard.nextDouble();
+		
+		System.out.print("Enter a double :: ");
+		doubleTwo = keyboard.nextDouble();
+		
+		//float input
+		System.out.print("Enter a float :: ");
+		floatOne = keyboard.nextFloat();
+		
+		System.out.print("Enter a float :: ");
+		floatTwo = keyboard.nextFloat();
+		
+		//short input 
+		System.out.print("Enter a short :: ");
+		shortOne = keyboard.nextShort();
+		
+		System.out.print("Enter a short :: ");
+		shortTwo = keyboard.nextShort();
+		//long input
+		System.out.print("Enter a short :: ");
+		longOne = keyboard.nextLong();
+		
+		System.out.print("Enter a short :: ");
+		longTwo = keyboard.nextLong();
+		
+		//byte output
+		System.out.println();
+		System.out.println("byte one = " + byteOne );
+		System.out.println("byte two = " + byteTwo );
+		
+		//int output
+		System.out.println();
+		System.out.println("integer one = " + intOne );
+		System.out.println("integer two = " + intTwo );
+
+		//double output
+		System.out.println();
+		System.out.println("double one = " + doubleOne );
+		System.out.println("double two = " + doubleTwo );
+		
+		//float output
+		System.out.println();
+		System.out.println("float one = " + floatOne );
+		System.out.println("float two = " + floatTwo );
+
+		//short output
+		System.out.println();
+		System.out.println("short one = " + shortOne );
+		System.out.println("short two = " + shortTwo );
+
+		//short output
+		System.out.println();
+		System.out.println("long one = " + longOne );
+		System.out.println("long two = " + longTwo );
+
+		//int add
+		intTotal = intOne + intTwo;
+		System.out.println("The sum of the first two integers is: " +intTotal );
+
+	}
+}

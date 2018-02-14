@@ -1,0 +1,54 @@
+//© A+ Computer Science  -  www.apluscompsci.com
+//Name -
+//Date -
+//Class -
+//Lab  -
+
+import static java.lang.System.*;
+import java.util.Scanner;
+
+public class Lab0c
+{
+	public static void main (String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+
+		int intOne, intTwo;
+		double doubleOne, doubleTwo;
+		float floatOne, floatTwo;
+		short shortOne, shortTwo;
+
+		//int input
+		System.out.print("Enter an integer :: ");
+		intOne = keyboard.nextInt();
+
+		System.out.print("Enter an integer :: ");
+		intTwo = keyboard.nextInt();
+
+
+		//double input
+		System.out.print("Enter a double :: ");
+		doubleOne = keyboard.nextDouble();
+		
+		System.out.print("Enter a double :: ");
+		doubleTwo = keyboard.nextDouble();
+
+
+		//int output
+		System.out.println();
+		System.out.println("integer one = " + intOne );
+		System.out.println("integer two = " + intTwo );
+
+		//double output
+		System.out.println();
+		System.out.println("double one = " + doubleOne );
+		System.out.println("double two = " + doubleTwo );
+
+
+
+
+
+
+
+	}
+}

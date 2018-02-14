@@ -1,0 +1,75 @@
+//© A+ Computer Science  -  www.apluscompsci.com
+//Name -
+//Date -
+//Class -
+//Lab  -
+
+import static java.lang.System.*;
+import java.util.Scanner;
+
+public class Lab0c
+{
+	public static void main (String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+
+		int intOne, intTwo;
+		double doubleOne, doubleTwo;
+		float floatOne, floatTwo;
+		short shortOne, shortTwo;
+
+		//int input
+		System.out.print("Enter an integer :: ");
+		intOne = keyboard.nextInt();
+
+		System.out.print("Enter an integer :: ");
+		intTwo = keyboard.nextInt();
+
+
+		//double input
+		System.out.print("Enter a double :: ");
+		doubleOne = keyboard.nextDouble();
+		
+		System.out.print("Enter a double :: ");
+		doubleTwo = keyboard.nextDouble();
+		
+		//float input
+		System.out.print("Enter a float :: ");
+		floatOne = keyboard.nextFloat();
+		
+		System.out.print("Enter a float :: ");
+		floatTwo = keyboard.nextFloat();
+		
+		//short input 
+		System.out.print("Enter a float :: ");
+		shortOne = keyboard.nextShort();
+		
+		System.out.print("Enter a float :: ");
+		shortTwo = keyboard.nextShort();
+
+		//int output
+		System.out.println();
+		System.out.println("integer one = " + intOne );
+		System.out.println("integer two = " + intTwo );
+
+		//double output
+		System.out.println();
+		System.out.println("double one = " + doubleOne );
+		System.out.println("double two = " + doubleTwo );
+		
+		//float output
+		System.out.println();
+		System.out.println("float one = " + floatOne );
+		System.out.println("float two = " + floatTwo );
+
+		//short output
+		System.out.println();
+		System.out.println("float one = " + shortOne );
+		System.out.println("float two = " + shortTwo );
+
+
+
+
+
+	}
+}
