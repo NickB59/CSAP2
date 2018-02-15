@@ -37,7 +37,6 @@ public class CharacterAnalyzer
 
 	public boolean isUpper( )
 	{
-		ascii = theChar; 
 		if(ascii > 64 && ascii < 91)
 		{
 			return true;
@@ -50,7 +49,6 @@ public class CharacterAnalyzer
 
 	public boolean isLower( )
 	{
-		ascii = theChar; 
 		if(ascii > 96 && ascii < 123)
 		{
 			return true;
@@ -63,7 +61,6 @@ public class CharacterAnalyzer
 	
 	public boolean isNumber( )
 	{
-		ascii = theChar; 
 		if(ascii > 47 && ascii < 58)
 		{
 			return true;
