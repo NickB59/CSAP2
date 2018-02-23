@@ -14,7 +14,7 @@ public class GuessingGame
 	public GuessingGame(int g)
 	{
 		upperBound = g;
-		compChoice = (int) (g*Math.random());
+		compChoice = (int) (g*Math.random() + 1);
 
 	}
 
@@ -22,8 +22,8 @@ public class GuessingGame
 	{
 		int i = compChoice;
 		int top = upperBound;
-		int count = 0;
-		int input = 0;
+		double count = 0;
+		double input = 0;
 		do
 		{
 			out.println("Enter a number between 1 and " + top);
@@ -31,7 +31,7 @@ public class GuessingGame
 			input = keyboard.nextInt();
 			count++;
 		}while(i!=input);
-		out.println("It took you " + count + " guesses to guess " + i);
+		out.println("It took you " + (int) count + " guesses to guess " + i);
 		out.println("You guessed wrong " + (double)(1/count) + " percent of the time.");
 	}
 

@@ -18,12 +18,11 @@ public class Lab10e
 			int guess = 0;
 			out.print("Guessing game - how many?");
 			guess = keyboard.nextInt();
-			
 			GuessingGame newGame = new GuessingGame(guess);
 			newGame.playGame();
 			out.println(newGame);
-			out.println("Do you want to play again?");
-			question = keyboard.nextLine();
-		}while(question.equalsIgnoreCase("y"));
+			out.print("Do you want to play again?");
+			question = keyboard.next();
+		}while(question.equals("y"));
 	}
 }
