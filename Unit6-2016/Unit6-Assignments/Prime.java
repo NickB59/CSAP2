@@ -14,8 +14,8 @@ public class Prime
 
 	public Prime()
 	{
-
-
+		
+		
 	}
 
 	public Prime(int num)
@@ -33,7 +33,7 @@ public class Prime
 	public boolean isPrime()
 	{
 			for (double i =2; i <= Math.sqrt(number); i++){
-				if (number % i ==0)
+				if (number % i == 0)
 				{
 					count = count +2;
 				}
@@ -50,7 +50,7 @@ public class Prime
 	public String toString()
 	{
 		
-		String output="";
+		String output= "";
 		if (isPrime() == true)
 		{
 			output = + number + " is a prime number";
