@@ -9,7 +9,7 @@ import static java.lang.System.*;
 
 public class GuessingGame
 {
-	private int upperBound; 
+	private int upperBound;
 	public int compChoice;
 	public GuessingGame(int g)
 	{
