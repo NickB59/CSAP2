@@ -49,7 +49,7 @@ public class RomanNumeral
 	{
 		number = 0;
 		String getting = "";
-		for (int i=0;i<roman.length();i++){
+			for (int i=0;i<roman.length();i++){
 			getting = roman.substring(i, i+1);
 			
 			if(i <= roman.length()-2&&(roman.substring(i).compareTo("IX") == 0||(roman.substring(i)).compareTo("IL") == 0)){
