@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Random;
 import java.util.ArrayList;
 
 /**
@@ -11,8 +12,10 @@ public class Deck {
 	/**
 	 * cards contains all the cards in the deck.
 	 */
+	//private List<Card> cards;
 	
-	private Card[] cards;
+	//Unit 9 - Array version of the Deck
+	private ArrayList<Card> cards;
 
 	/**
 	 * size is the number of not-yet-dealt cards.
@@ -32,32 +35,37 @@ public class Deck {
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		cards = new Card[ranks.length*suits.length];
-		int num = 0;
-		size = 0;
-		for (int i = 0; i < ranks.length; i++)
-		{
-			for (int j = 0; j < suits.length; j++)
-			{
-					cards[num] = new Card(ranks[i], suits[j], values[i]);
-					num++;	
-					size = cards.length;
-			}		
-		}
-		shuffle();
-	}
 		
+		int numcards = ranks.length*suits.length;
+		cards = new ArrayList<Card>(numcards);
+		
+		int i=0;
+		if (i<=numcards){
+			for(int r=0;r<ranks.length;r++){
+				for(int s=0;s<suits.length;s++){
+						Card card = new Card(ranks[r], suits[s], values[r]);
+						cards.add(card);
+						i++;
+				}	
+			}
+		}
+		
+	size = cards.size();
+	shuffle();
+	}
+
+
 	/**
 	 * Determines if this deck is empty (no undealt cards).
 	 * @return true if this deck is empty, false otherwise.
 	 */
 	public boolean isEmpty() {
-		if (size == 0)
-		{
+		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		if(size == 0){
 			return true;
 		}
-		return false;
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		else
+			return false;
 	}
 
 	/**
@@ -65,8 +73,8 @@ public class Deck {
 	 * @return the number of undealt cards in this deck.
 	 */
 	public int size() {
-		return size;
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		return size;
 	}
 
 	/**
@@ -74,17 +82,21 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		for (int k = cards.length - 1; k >= 0; k --)
-		{
-			int j = (int)(Math.random()*cards.length);
-			Card templocation = cards[j];
-			cards[j] = cards[k];
-			cards[k] = templocation;		
-		}
-		size = cards.length;
+		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+
+		for (int k=size-1;k>0;k--){
+			Random rng = new Random();
+			int r = rng.nextInt(k);
+			Card temp = cards.get(r);
+			cards.set(r, cards.get(k));
+			cards.set(k, temp);
+	
+			
+			
 			
 		}
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+		size = cards.size();
+	}
 
 	/**
 	 * Deals a card from this deck.
@@ -92,19 +104,14 @@ public class Deck {
 	 *         previously dealt.
 	 */
 	public Card deal() {
-		
-		if (isEmpty() == true)
-		{
-			return null;
-		}
+		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
 		size--;
-		return cards[size];
+		if (size==-1)
+			return null;
+		else
+			return cards.get(size);
 		
 	}
-		
-	
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-	
 
 	/**
 	 * Generates and returns a string representation of this deck.
@@ -114,8 +121,9 @@ public class Deck {
 	public String toString() {
 		String rtn = "size = " + size + "\nUndealt cards: \n";
 
+		
 		for (int k = size - 1; k >= 0; k--) {
-			rtn = rtn + cards[k];
+			rtn = rtn + cards.get(k);
 			if (k != 0) {
 				rtn = rtn + ", ";
 			}
@@ -126,16 +134,17 @@ public class Deck {
 		}
 
 		rtn = rtn + "\nDealt cards: \n";
-		for (int k = cards.length - 1; k >= size; k--) {
-			rtn = rtn + cards[k];
+		for (int k = cards.size() - 1; k >= size; k--) {
+			rtn = rtn + cards.get(k);
 			if (k != size) {
 				rtn = rtn + ", ";
 			}
-			if ((k - cards.length) % 2 == 0) {
+			if ((k - cards.size()) % 2 == 0) {
 				// Insert carriage returns so entire deck is visible on console.
 				rtn = rtn + "\n";
 			}
 		}
+		
 
 		rtn = rtn + "\n";
 		return rtn;
