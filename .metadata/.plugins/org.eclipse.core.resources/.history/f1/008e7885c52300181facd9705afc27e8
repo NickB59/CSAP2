@@ -63,7 +63,7 @@ public class Class
 	{
 		return "";
 	}
-	
+
 	public String getStudentWithHighestAverage()
 	{
 		double high = Double.MIN_VALUE;
