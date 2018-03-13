@@ -9,7 +9,7 @@ import java.util.Scanner;
 import static java.lang.System.*;
 import static java.util.Arrays.*;
 
-public class Student
+public class Student implements Comparable<Student>
 {
 	private String myName;
 	private Grades myGrades;
@@ -22,66 +22,90 @@ public class Student
 	
 	public Student(String name, String gradeList)
 	{
-
-
-
+		setName(name);
+		setGrades(gradeList);
 	}
 	
 	public void setName(String name)
 	{
-
-
+		myName = name;
 	}	
 	
 	public void setGrades(String gradeList)
 	{
-
-	
+		myGrades = new Grades(gradeList);
 	}
 	
 	public void setGrade(int spot, double grade)
 	{
-
-
+		myGrades.setGrade(spot, grade);
 	}
 
 	public String getName()
 	{
-		return "";
+		return myName;
 	}
 	
 	public int getNumGrades()
 	{
-		return 0;
+		return myGrades.getNumGrades();
 	}
 
 	public double getSum()
 	{
-		return 0.0;
+		return myGrades.getSum();
 	}
 	
 	public double getAverage()
 	{
-		return 0.0;
+		double avg = 0;
+		avg = getSum() / getNumGrades();
+		return avg;
 	}
 
 	public double getAverageMinusLow()
 	{
-		return 0.0;
+		double avg = 0;
+		avg = (getSum() - getLowGrade()) / getNumGrades();
+		return avg;
+	}
+	
+	public int compareTo(Student s){
+		if (getAverage() - s.getAverage() > 0){
+			return 1;
+		}
+		else if (getAverage() - s.getAverage() == 0){
+			return 0;
+		}
+		else{
+			return -1;
+		}
+	}
+	
+	public boolean equals (Student s){
+		if (getAverage() == s.getAverage()){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 	
 	public double getHighGrade()
 	{
-		return 0.0;		
+		return myGrades.getHighGrade();		
 	}
 	
 	public double getLowGrade()
 	{
-		return 0.0;	
+		return myGrades.getLowGrade();	
 	}
 	
 	public String toString()
 	{
-		return "";
+		String output = "";
+		output += getName();
+		output += " - " + myGrades.toString();
+		return output;
 	}	
 }
