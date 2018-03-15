@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="highName" key="selection"/>
+		<item value="public void setGrades(String" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="public void setGrades(String"/>
+			<item value="list"/>
 			<item value="hName"/>
 			<item value="stuNum"/>
 			<item value="stuName"/>
 			<item value="giraffes"/>
 			<item value="girrages"/>
 			<item value="size == 0"/>
-			<item value="size==0"/>
-			<item value="for"/>
 		</list>
 		<list key="replacehistory">
 			<item value="highName"/>
