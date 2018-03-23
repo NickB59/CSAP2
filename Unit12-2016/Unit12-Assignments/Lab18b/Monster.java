@@ -37,9 +37,9 @@ public class Monster implements Comparable
 
 	//write an initialization constructor with int parameters ht, wt, and age
 	public Monster(int h, int w, int a){
-		myHeight = h;
-		myWeight = w;
-		myAge = a;	
+		setHeight(h);
+		setWeight(w);
+		setAge(a);
 		}
 
 

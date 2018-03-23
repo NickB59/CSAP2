@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="WordA" key="selection"/>
+		<item value="cnt" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="count"/>
+			<item value="i"/>
+			<item value="super"/>
+			<item value="intvalue"/>
 			<item value="Word1"/>
 			<item value="WordV"/>
 			<item value="Word"/>
 			<item value="public void setGrades(String"/>
-			<item value="list"/>
-			<item value="hName"/>
-			<item value="stuNum"/>
-			<item value="stuName"/>
 		</list>
 		<list key="replacehistory">
+			<item value="cnt"/>
 			<item value="WordA"/>
 			<item value="Word1"/>
 			<item value="Word"/>
@@ -25,7 +26,6 @@
 			<item value="studentNum"/>
 			<item value="studentName"/>
 			<item value=""/>
-			<item value="getting"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

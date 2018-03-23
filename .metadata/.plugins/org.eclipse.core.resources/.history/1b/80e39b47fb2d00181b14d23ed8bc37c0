@@ -1,0 +1,100 @@
+//© A+ Computer Science  -  www.apluscompsci.com
+//Name -
+//Date -
+//Class - 
+//Lab  -
+
+import java.util.Scanner;
+import static java.lang.System.*;
+
+public class TicTacToe
+{
+	private char[][] mat;
+
+	public TicTacToe()
+	{
+		mat = new char[3][3];
+	}
+
+	public TicTacToe(String game)
+	{
+		mat = new char[3][3];
+		
+		for(int i=0; i<3; i++){
+			for(int j=0; i<3; i++){
+				mat[i][j]=game.charAt(3*i*j);
+			}
+		}
+	}
+
+	public String getWinner()
+	{
+		//across
+		for(int k=0; k<3; k++){
+			char c = mat[k][0];
+			int cnt = 0;
+			for(int l=0; l<3;l++){
+				if(mat[k][l]==c)
+					cnt++;;
+			}
+		if(cnt==3)
+			return Character.toString(c)+"a";
+		else
+			cnt = 0;
+		}
+		//vertical
+		for(int i=0; i<3; i++){
+			char c = mat[0][i];
+			int cnt = 0;
+			for(int j=0; j<3;j++){
+				if(mat[i][j]==c)
+					cnt++;;
+			}
+		if(cnt==3)
+			return Character.toString(c)+"a";
+		}
+		//diagonal
+		char d =mat[0][0];
+		int count = 0;
+		for(int j=0; j<3;j++){
+			if(mat[j][j]==d)
+				count++;
+		}
+		if(count==3)
+			return Character.toString(d)+"d";
+		else
+			count = 0;
+		d=mat[0][2];
+		if(mat[1][1]==d&&mat[2][0]==d)
+			return Character.toString(d)+"d";
+		
+		return "";
+	}
+
+	public String toString()
+	{
+		String output="";
+		for(int i=0;i<3;i++){
+			for(int j=0;j<3;j++){
+				output = output + mat[i][j];
+			}
+			output = output + "\n";
+		}
+		if(getWinner().equals("Xh"))
+			output = output + "X wins horizontally!";
+		else if(getWinner().equals("Oh"))
+			output = output + "O wins horizontally!";
+		else if(getWinner().equals("Xv"))
+			output = output + "X wins vertically!";
+		else if(getWinner().equals("Ov"))
+			output = output + "O wins vertically!";
+		else if(getWinner().equals("Xd"))
+			output = output + "X wins diagonally!";
+		else if(getWinner().equals("Od"))
+			output = output + "O wins diagonally!";
+		else if(getWinner().equals(""))
+			output = output + "cat's game - no winner!";
+
+		return output+"\n\n";
+	}
+}

@@ -10,15 +10,17 @@ public class WordA implements Comparable<WordA>
 {
 	private String word;
 
+	//initalization constructor
 	public WordA( String s)
 	{
 		word = s;
 	}
 
+	//Finds how many vowels are in the word above.
 	private int numVowels()
 	{
-		String vowels = "AEIOUaeiou";
-		int vowelCount=0;
+		String vowels = "AEIOUaeiou"; //We need this string to see how many vowels there are
+		int vowelCount=0; //Setting the vowelCount
 		
 		for(int i=0;i<word.length();i++){
 			for(int j=0;j<vowels.length();j++){
@@ -31,23 +33,16 @@ public class WordA implements Comparable<WordA>
 
 	public int compareTo(WordA rhs)
 	{
-		if(this.numVowels()>rhs.numVowels())
+		//If there is more vowels in the word than the compared, return 1
+		if(this.numVowels()>rhs.numVowels()) 
 			return 1;
-		else if(this.numVowels()==rhs.numVowels()){
-			if((int)word.charAt(0) > (int)rhs.toString().charAt(0))
-				return 1;
-			else if((int)word.charAt(0) == (int)rhs.toString().charAt(0)){
-				if((int)word.charAt(1) > (int)rhs.toString().charAt(1))
-					return 1;
-				if((int)word.charAt(1) == (int)rhs.toString().charAt(1))
-					return 0;
-				else
-					return -1;
-			}
+		//If the word and the compared have the same amount of vowels, compare the words
+		else if(this.numVowels()==rhs.numVowels()){ 
+			return word.compareTo(rhs.word);
+		}
+		//If there is more vowels in the compared than the word, return -1
 			else
 				return -1;
-		}
-		return -1;
 	}
 
 	public String toString()
