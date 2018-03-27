@@ -20,8 +20,8 @@ public class FancyWord
 	   for(int i=0;i<s.length();i++){ //Bounds from 0 to the length of the word
 		   mat[0][i]=s.charAt(i); // Goes through the top row
 		   mat[i][i]=s.charAt(i); // Goes from top left to bottom right
-		   mat[s.length()-(i+1)][i]=s.charAt(i); // Goes from top right to bottom left
-		   mat[s.length()-1][i]=s.charAt(i); //goes through bottom row
+		   //mat[s.length()-(i+1)][i]=s.charAt(i); // 
+		   mat[s.length()-1][i]=s.charAt(i);
 	   }
 	}
 
@@ -29,9 +29,9 @@ public class FancyWord
 	{
 		String output= "";
 		
-		for(int i=0;i<mat.length;i++){ //Sets the bounds of the columns
-			for(int j=0;j<mat.length;j++){ // Sets the bounds of the rows
-				output = output+mat[i][j]; // Adds each letter to the matrix
+		for(int i=0;i<mat.length;i++){
+			for(int j=0;j<mat.length;j++){
+				output = output+mat[i][j];
 			}
 			output = output + "\n";
 		}

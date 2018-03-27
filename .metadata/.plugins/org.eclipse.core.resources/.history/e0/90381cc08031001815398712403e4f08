@@ -11,18 +11,18 @@ public class TicTacToe
 {
 	private char[][] mat;
 
-	public TicTacToe() // default constructor
+	public TicTacToe()
 	{
-		mat = new char[3][3]; //3x3 since that is what a tic tac toe game is
+		mat = new char[3][3];
 	}
 
-	public TicTacToe(String game) //creating a tic tac toe game
+	public TicTacToe(String game)
 	{
-		mat = new char[3][3]; //3x3 
+		mat = new char[3][3];
 		
-		for(int i=0; i<3; i++){ //Columns
-			for(int j=0; j<3; j++){ //Rows
-				mat[i][j]=game.charAt(3*i+j); //Sets 3 columns and rows
+		for(int i=0; i<3; i++){
+			for(int j=0; j<3; j++){
+				mat[i][j]=game.charAt(3*i+j);
 			}
 		}
 	}
@@ -30,7 +30,7 @@ public class TicTacToe
 	public String getWinner()
 	{
 		//across
-		for(int k=0; k<3; k++){ //Checks if the there 
+		for(int k=0; k<3; k++){
 			char a = mat[k][0];
 			int count = 0;
 			for(int l=0; l<3;l++){

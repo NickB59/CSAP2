@@ -29,9 +29,9 @@ public class FancyWord
 	{
 		String output= "";
 		
-		for(int i=0;i<mat.length;i++){ //Sets the bounds of the columns
-			for(int j=0;j<mat.length;j++){ // Sets the bounds of the rows
-				output = output+mat[i][j]; // Adds each letter to the matrix
+		for(int i=0;i<mat.length;i++){ //Sets the bounds of the 
+			for(int j=0;j<mat.length;j++){
+				output = output+mat[j][j];
 			}
 			output = output + "\n";
 		}

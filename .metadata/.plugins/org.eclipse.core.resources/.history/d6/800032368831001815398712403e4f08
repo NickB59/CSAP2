@@ -43,9 +43,9 @@ public class Maze
 
 	public boolean hasExitPath(int r, int c)
 	{
-		if(r>=0&&r<maze2.length&&c>=0&&c<maze2.length&&maze2[r][c]==1){ //If it is within the maze length and =s
-			maze2[r][c] = 2; //Sets it to some sort of 
-			if(c>=maze2.length-1){ //If the right side has a 1, then it is solved!
+		if(r>=0&&r<maze2.length&&c>=0&&c<maze2.length&&maze2[r][c]==1){
+			maze2[r][c] = 2;
+			if(c>=maze2.length-1){
 				solved = 1;
 				return true;
 			}
@@ -66,11 +66,11 @@ public class Maze
 
 		for(int i=0; i<maze.length; i++){ //Outputs the characters for the column
 			for(int j = 0; j<maze.length; j++){ //Outputs the characters for the row
-				output = output + maze[i][j]; //Outputs the maze
+				output = output + maze[i][j];
 			}
 			output = output + "\n";
 		}	
-		if(solved==1) // If solved, then exit found
+		if(solved==1)
 			output = output + "exit found\n";
 		else if(solved==0)
 			output = output + "exit not found\n";
