@@ -15,11 +15,19 @@ public class Lab15d
 {
 	public static void main( String args[] ) throws IOException
 	{
-
-
-
-
-
-
+		Scanner file = new Scanner(new File("C:\\Users\\bnick\\Desktop\\CSAP2\\Unit13-2016\\Unit13-Assignments\\lab15d.dat"));
+		
+		int num = file.nextInt();
+		FancyWords[] sents = new FancyWords[num];
+		
+		file.nextLine();
+		
+		for(int i=0;i<num;i++){
+			sents[i] = new FancyWords(file.nextLine());
+		}
+		
+		for(int j=0;j<num;j++){
+			System.out.println(sents[j].toString());
+		}
 	}
 }

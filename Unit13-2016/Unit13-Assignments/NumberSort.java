@@ -18,56 +18,27 @@ public class NumberSort
 	{
 		int count = 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		for(int i = number; i>0; i=i/10){
+			count++;
+		}
 		
 		return count;
 	}
 	
 	public static int[] getSortedDigitArray(int number)
 	{
-		int[] sorted = null;
+		int digits = getNumDigits(number);
+		int[] sorted = new int[digits];
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		for(int i = 0; i < digits;i++){
+			for(int j = 0; i < digits - 1; j++){
+				if(sorted[j]>sorted[j+1]){
+					int temp = sorted[j];
+					sorted[j] = sorted[j+1];
+					sorted[j+1] = temp;
+				}
+			}
+		}
 		return sorted;
 	}
 }

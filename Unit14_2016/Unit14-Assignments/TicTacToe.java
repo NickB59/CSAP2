@@ -30,11 +30,11 @@ public class TicTacToe
 	public String getWinner()
 	{
 		//across
-		for(int k=0; k<3; k++){ //Checks if the there 
-			char a = mat[k][0];
+		for(int i=0; i<3; i++){ //Checis if the there 
+			char a = mat[i][0];
 			int count = 0;
-			for(int l=0; l<3;l++){
-				if(mat[k][l]==a)
+			for(int j=0; j<3;j++){
+				if(mat[i][j]==a)
 					count++;;
 			}
 		if(count==3)

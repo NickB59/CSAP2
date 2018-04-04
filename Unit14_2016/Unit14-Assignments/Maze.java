@@ -23,8 +23,7 @@ public class Maze
 
 	public Maze(int size, String line) // Constructor
 	{
-		solved = 0;
-		Scanner scan = new Scanner(line); 
+		Scanner scan = new Scanner(line); //Scans the file
 		maze = new int[size][size]; //Creates a new maze
 		for(int i=0; i<size; i++){ //Columns
 			for(int j=0;j<size;j++){ //Rows
@@ -43,17 +42,17 @@ public class Maze
 
 	public boolean hasExitPath(int r, int c)
 	{
-		if(r>=0&&r<maze2.length&&c>=0&&c<maze2.length&&maze2[r][c]==1){ //If it is within the maze length and =s
+		if(r>=0&&r<maze2.length&&c>=0&&c<maze2.length&&maze2[r][c]==1){ //If it is within the maze length and = 1
 			maze2[r][c] = 2; //Sets it to some sort of 
 			if(c>=maze2.length-1){ //If the right side has a 1, then it is solved!
 				solved = 1;
 				return true;
 			}
 			else{
-				hasExitPath(r-1,c); //up
-				hasExitPath(r+1,c); //down
-				hasExitPath(r,c-1); //left
-				hasExitPath(r,c+1); //right
+				hasExitPath(r-1,c); //up; calls itself again
+				hasExitPath(r+1,c); //down; calls itself again
+				hasExitPath(r,c-1); //left; calls itself again
+				hasExitPath(r,c+1); //right; calls itself again
 			}
 		}
 
