@@ -2,37 +2,37 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="j" key="selection"/>
+		<item value="set" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="j"/>
-			<item value="BlinkyBall"/>
-			<item value="AirHockey"/>
-			<item value="l"/>
-			<item value="k"/>
-			<item value="c"/>
-			<item value="cnt"/>
-			<item value="count"/>
+			<item value="set"/>
+			<item value="paddles"/>
+			<item value="graphtoback"/>
+			<item value="wall"/>
+			<item value="did"/>
+			<item value="new Ball"/>
+			<item value="CYAN"/>
+			<item value="RED,10"/>
 		</list>
 		<list key="replacehistory">
-			<item value="j"/>
-			<item value="i"/>
-			<item value="count"/>
-			<item value="cnt"/>
-			<item value="WordA"/>
-			<item value="Word1"/>
-			<item value="Word"/>
-			<item value="highName"/>
+			<item value="ORANGE"/>
+			<item value="orange"/>
+			<item value="5,5"/>
+			<item value="9,9"/>
+			<item value="ySpeed = 3;"/>
+			<item value="xSpeed = 9;"/>
+			<item value="20,20"/>
+			<item value="10,10"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="826" key="DIALOG_X_ORIGIN"/>
-		<item value="268" key="DIALOG_Y_ORIGIN"/>
+		<item value="1217" key="DIALOG_X_ORIGIN"/>
+		<item value="257" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

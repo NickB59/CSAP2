@@ -26,7 +26,7 @@ public class Breakout extends Canvas implements KeyListener, Runnable
 	public Breakout()
 	{
 		//set up all variables related to the game
-		ball = new Ball(100,200,25,25,Color.CYAN,2,2);
+		ball = new Ball(100,100,20,20,Color.ORANGE,5,5);
 		Paddle = new Paddle(400,520,80,15,Color.RED,5);
 		left = new Wall(0,0,10,600);
 		right = new Wall(775,0,10,600);

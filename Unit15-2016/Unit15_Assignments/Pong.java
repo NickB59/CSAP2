@@ -42,7 +42,7 @@ Be sure to change all instances before running.  Currently set to BlinkyBall. */
 		left = new Wall(0,0,10,600);
 		right = new Wall(775,0,10,600);
 		top = new Wall(0,0,800,10);
-		bottom = new Wall(0,555,800,10);
+		bottom = new Wall(0,555,800,50);
 
 		keys = new boolean[4];
 
@@ -96,7 +96,7 @@ Be sure to change all instances before running.  Currently set to BlinkyBall. */
 				ball.setXSpeed(-ball.getXSpeed());
 				ball.setYSpeed(ball.getYSpeed());//Does nothing for normal ball but speeds up for SpeedUpBall
 				ball.remove(graphToBack);
-				ball = new Ball(400,300,20,20,Color.ORANGE,5,5);
+				ball = new Ball(400,300,20,20,Color.ORANGE,-5,-5);
 //				ball = new BlinkyBall(400,300,20,20,Color.,5,5);
 //				ball = new InvisibleBall(400,300,20,20,Color.ORANGE,5,5);
 //				ball = new SpeedUpBall(400,300,20,20,Color.ORANGE,5,5);
