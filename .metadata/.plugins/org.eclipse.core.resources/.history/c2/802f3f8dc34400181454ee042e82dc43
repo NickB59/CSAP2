@@ -1,0 +1,16 @@
+import sun.audio.*;
+
+public class Sound{
+	
+	public static void music()
+	{
+		
+	}
+	
+	public static void main (String[] args)
+	{
+		
+	}
+	
+	
+}

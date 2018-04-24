@@ -1,0 +1,27 @@
+import java.io.File;
+import java.util.ArrayList;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+
+public class Sound implements Runnable{
+	
+	private ArrayList<String> musicFiles;
+	
+	public Sound(String... files){
+		musicFiles = new ArrayList<String>();
+		for(String file: files)
+			musicFiles.add("./resources/audio" + file +".wav");
+		
+	}
+	private void playSound(String fileName){
+		try{
+			File soundFile = new File(fileName);
+			AudioInputStream ais = new AudioSystem.getAudioInputStream(soundFile);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	@Override
+	public void run() {}
+}
