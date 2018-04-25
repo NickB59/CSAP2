@@ -354,24 +354,24 @@ public class Picture extends SimplePicture
 	   }
   }
   
-  public void sharpen(int x,int y,int w,int h){
+  public void sharpen(){
 	  Pixel origPixel = null;
 	  Pixel newPixel = null;
 	  Pixel[][] pixels = this.getPixels2D();
-	  for (int row = x; row < pixels.length; row++) 
-	  {
-			for (int col = y; col < pixels[0].length; col++) 
-			{
-				origPixel = [row][col];
-				newPixel = [row-1][col-1];
-				origPixel = [((origPixel.getRow()+newPixel.getRow()/2))][((origPixel.getCol()+newPixel.getCol()/2))];
-				if (origPixel.getRow()>255)
-					origPixel = [255][0];
-				if(origPixel.getCol()>255)
-				
-			}
+	  for (int x = 2; x < pixels.length; x++) {
+			for (int y = 2; y < pixels[0].length; y++) {
+	      {
+	    	  origPixel = [x][y];
+	    	  newPixel = [x-1][y-1];
+	    	  
+	    	  origPixel = (origPixel + newPixel)/2;
+	    	  if(OrigPixel<0)
+	    		  origPixel = 0;
+	    	  if(OrigPixel>255)
+	    		  origPixel = 255;
+	      }
+	    }
 	  }
-	  
   }
   
   

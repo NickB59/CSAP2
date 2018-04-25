@@ -124,7 +124,7 @@ public class PictureTester
   public static void testSharpen(int x, int y, int w, int h)
   {
        Picture beach = new Picture("beach.jpg");
-       beach.sharpen(50,50,500,400);
+       beach.sharpen(x,y,w,h);
        beach.explore();
   }
 
@@ -158,6 +158,6 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
-	testSharpen(); 
+	testSharpen(50,50,500,400); 
   }
 }

@@ -358,19 +358,14 @@ public class Picture extends SimplePicture
 	  Pixel origPixel = null;
 	  Pixel newPixel = null;
 	  Pixel[][] pixels = this.getPixels2D();
-	  for (int row = x; row < pixels.length; row++) 
-	  {
+	  for (int row = x; row < pixels.length; row++) {
 			for (int col = y; col < pixels[0].length; col++) 
 			{
 				origPixel = [row][col];
 				newPixel = [row-1][col-1];
-				origPixel = [((origPixel.getRow()+newPixel.getRow()/2))][((origPixel.getCol()+newPixel.getCol()/2))];
-				if (origPixel.getRow()>255)
-					origPixel = [255][0];
-				if(origPixel.getCol()>255)
+				origPixel = [((origPixel.getRow()+newPixel.getRow()/2)][{{[((origPixel.getCol()+newPixel.getCol()/2)]
 				
 			}
-	  }
 	  
   }
   

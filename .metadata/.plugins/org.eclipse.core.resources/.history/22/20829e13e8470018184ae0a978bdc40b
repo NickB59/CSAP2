@@ -270,7 +270,20 @@ public class Picture extends SimplePicture
 	    }
   }
   
-  
+  public void grayscale()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	    for (Pixel[] rowArray : pixels)
+	    {
+	      for (Pixel pixelObj : rowArray)
+	      {
+	    	  int avg = ((int)pixelObj.getBlue() + (int)pixelObj.getRed() + (int)pixelObj.getGreen()/3);
+	    	  pixelObj.setRed(avg);
+		      pixelObj.setBlue(avg);
+		      pixelObj.setGreen(avg);
+	      }
+	   }
+  }
   
   public void fixUnderwater()
   {
@@ -339,39 +352,15 @@ public class Picture extends SimplePicture
 		}
   }
   
-  public void grayscale()
-  {
-	    Pixel[][] pixels = this.getPixels2D();
+  public void sharpen(){
+	  Pixel[][] pixels = this.getPixels2D();
 	    for (Pixel[] rowArray : pixels)
 	    {
 	      for (Pixel pixelObj : rowArray)
 	      {
-	    	  int avg = ((int)pixelObj.getBlue() + (int)pixelObj.getRed() + (int)pixelObj.getGreen()/3);
-	    	  pixelObj.setRed(avg);
-		      pixelObj.setBlue(avg);
-		      pixelObj.setGreen(avg);
+	    	  
 	      }
-	   }
-  }
-  
-  public void sharpen(int x,int y,int w,int h){
-	  Pixel origPixel = null;
-	  Pixel newPixel = null;
-	  Pixel[][] pixels = this.getPixels2D();
-	  for (int row = x; row < pixels.length; row++) 
-	  {
-			for (int col = y; col < pixels[0].length; col++) 
-			{
-				origPixel = [row][col];
-				newPixel = [row-1][col-1];
-				origPixel = [((origPixel.getRow()+newPixel.getRow()/2))][((origPixel.getCol()+newPixel.getCol()/2))];
-				if (origPixel.getRow()>255)
-					origPixel = [255][0];
-				if(origPixel.getCol()>255)
-				
-			}
-	  }
-	  
+	    }
   }
   
   
